@@ -696,11 +696,63 @@
             "testStrategy": ""
           }
         ]
+      },
+      {
+        "id": 13,
+        "title": "Migração para Repositório Privado da Empresa",
+        "description": "Migrar o SDK XGATE PHP do repositório público atual para o repositório privado da empresa no GitHub, mantendo todo o histórico de commits e configurações.",
+        "status": "in-progress",
+        "dependencies": [
+          10,
+          11,
+          12
+        ],
+        "priority": "high",
+        "details": "Esta tarefa envolve a migração completa do SDK XGATE PHP para o repositório privado da empresa. O SDK atualmente está em repositório público, mas precisa ser movido para o repositório privado da empresa por questões de segurança e controle de acesso, políticas internas da empresa, integração com sistemas internos, e controle de releases e versioning. A migração inclui: configuração do repositório privado, migração do código com histórico completo, configuração de CI/CD, e atualização da documentação.",
+        "testStrategy": "Validar migração completa do histórico, testar pipelines no novo repositório, verificar funcionamento de todas as integrações, e confirmar acesso adequado da equipe.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Configuração do Repositório Privado",
+            "description": "Criar repositório privado no GitHub da empresa com configurações adequadas",
+            "dependencies": [],
+            "details": "Criar repositório privado no GitHub da empresa, configurar permissões adequadas para a equipe, definir branch protection rules, e configurar webhooks e integrações necessárias.",
+            "status": "pending",
+            "testStrategy": "Verificar criação do repositório, validar permissões da equipe, testar branch protection rules."
+          },
+          {
+            "id": 2,
+            "title": "Migração do Código",
+            "description": "Transferir todo o histórico de commits, branches e tags",
+            "dependencies": [1],
+            "details": "Transferir todo o histórico de commits, manter todas as branches existentes, preservar tags e releases, e atualizar referências de URLs no código.",
+            "status": "pending",
+            "testStrategy": "Validar histórico completo, verificar todas as branches, confirmar tags e releases."
+          },
+          {
+            "id": 3,
+            "title": "Configuração de CI/CD",
+            "description": "Adaptar pipelines para o novo repositório",
+            "dependencies": [2],
+            "details": "Adaptar pipelines para o novo repositório, configurar secrets e variáveis de ambiente, validar funcionamento dos workflows, e configurar deployment automático.",
+            "status": "pending",
+            "testStrategy": "Testar todos os workflows, validar secrets, confirmar deployment automático."
+          },
+          {
+            "id": 4,
+            "title": "Documentação e Comunicação",
+            "description": "Atualizar documentação e comunicar mudança",
+            "dependencies": [3],
+            "details": "Atualizar documentação com novas URLs, comunicar mudança para stakeholders, criar guia de migração para desenvolvedores, e atualizar README com informações do repositório privado.",
+            "status": "pending",
+            "testStrategy": "Verificar atualização de todas as URLs, confirmar comunicação enviada, validar guia de migração."
+          }
+        ]
       }
     ],
     "metadata": {
       "created": "2025-06-30T14:55:19.383Z",
-      "updated": "2025-07-02T04:03:05.948Z",
+      "updated": "2025-01-06T01:30:00.000Z",
       "description": "Tasks for master context"
     }
   }

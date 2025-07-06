@@ -1,0 +1,66 @@
+# Task 13: Migração para Repositório Privado da Empresa
+
+## Descrição
+Migrar o SDK XGATE PHP do repositório público atual para o repositório privado da empresa no GitHub, mantendo todo o histórico de commits e configurações.
+
+## Detalhes
+Esta tarefa envolve a migração completa do SDK XGATE PHP para o repositório privado da empresa, incluindo:
+
+1. **Configuração do Repositório Privado**
+   - Criar repositório privado no GitHub da empresa
+   - Configurar permissões adequadas para a equipe
+   - Definir branch protection rules
+   - Configurar webhooks e integrações necessárias
+
+2. **Migração do Código**
+   - Transferir todo o histórico de commits
+   - Manter todas as branches existentes
+   - Preservar tags e releases
+   - Atualizar referências de URLs no código
+
+3. **Configuração de CI/CD**
+   - Adaptar pipelines para o novo repositório
+   - Configurar secrets e variáveis de ambiente
+   - Validar funcionamento dos workflows
+   - Configurar deployment automático
+
+4. **Documentação e Comunicação**
+   - Atualizar documentação com novas URLs
+   - Comunicar mudança para stakeholders
+   - Criar guia de migração para desenvolvedores
+   - Atualizar README com informações do repositório privado
+
+## Contexto
+O SDK XGATE PHP atualmente está em repositório público, mas precisa ser movido para o repositório privado da empresa por questões de:
+- Segurança e controle de acesso
+- Políticas internas da empresa
+- Integração com sistemas internos
+- Controle de releases e versioning
+
+## Prioridade
+Alta - Necessário para alinhamento com políticas de segurança da empresa
+
+## Dependências
+- Aprovação da equipe de segurança
+- Acesso ao GitHub da empresa
+- Configuração de permissões adequadas
+
+## Critérios de Aceitação
+- [ ] Repositório privado criado e configurado
+- [ ] Código migrado com histórico completo
+- [ ] CI/CD funcionando no novo repositório
+- [ ] Documentação atualizada
+- [ ] Equipe comunicada sobre a mudança
+- [ ] Repositório público arquivado ou removido
+
+## Riscos
+- Perda de histórico durante migração
+- Quebra de integrações existentes
+- Impacto no acesso de desenvolvedores externos
+- Necessidade de reconfiguração de ferramentas
+
+## Notas Técnicas
+- Usar `git clone --mirror` para preservar histórico completo
+- Validar todas as referências de URLs no código
+- Testar pipelines antes da migração definitiva
+- Manter backup do repositório atual 
